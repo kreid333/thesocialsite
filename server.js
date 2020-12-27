@@ -44,3 +44,10 @@ app.get("/api/config", (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is running on http://localhost:${PORT}`);
 });
+
+// REACT STATIC BUILD FOLDER AND GET ROUTE
+app.use(express.static("client/build"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
