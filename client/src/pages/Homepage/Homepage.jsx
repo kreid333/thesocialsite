@@ -8,14 +8,19 @@ import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 const Homepage = () => {
+  // SETTING SHOW TO THE BOOLEAN FALSE (THIS IS USED FOR DISPLAYING THE MODAL)
   const [show, setShow] = useState(false);
 
+  // HANDLING CLOSE OF MODAL
   const handleClose = () => setShow(false);
+  
+  // HANDLING THE SHOWING OF THE MODAL
   const handleShow = (e) => {
     e.preventDefault();
     setShow(true);
   };
 
+  // FUNCTION THAT RETURNS THE CENTERED REACT-BOOTSTRAP MODAL
   function CenteredModal(props) {
     return (
       <Modal
@@ -37,6 +42,7 @@ const Homepage = () => {
     );
   }
 
+  // SIGN UP FORM FOR THE MODAL
   function signUpForm() {
     return (
       <form className="text-center">
@@ -68,6 +74,7 @@ const Homepage = () => {
   }
 
   return (
+    // HTML CONTENT
     <div className="container">
       <div className="row">
         <div className="col-lg-6" id="left">
