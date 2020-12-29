@@ -1,0 +1,23 @@
+#left {
+    height: 100vh;
+    position: relative;
+    background-color: rgb(70, 170, 255) !important;
+}
+
+#right {
+    height: 100vh;
+}
+
+#left-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.icons {
+    height: 20vh;
+}
+
+h2 {
+    margin-top: 16px !important;
+}
