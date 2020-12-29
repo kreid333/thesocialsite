@@ -16,7 +16,7 @@ const Homepage = () => {
                 <FontAwesomeIcon icon={faUserPlus} size="4x" />
               </div>
               <div className="col-xs-9">
-                <h2 className="ml-3">Connect with others</h2>
+                <h2 className="ml-3 key-points">Connect with others</h2>
               </div>
             </div>
             <div className="row">
@@ -24,7 +24,7 @@ const Homepage = () => {
                 <FontAwesomeIcon icon={faUsers} size="4x" />
               </div>
               <div className="col-xs-9">
-                <h2 className="ml-3">Engage in conversations</h2>
+                <h2 className="ml-3 key-points">Engage in conversations</h2>
               </div>
             </div>
             <div className="row mt-5">
@@ -32,7 +32,7 @@ const Homepage = () => {
                 <FontAwesomeIcon icon={faGlobe} size="4x" />
               </div>
               <div className="col-xs-9">
-                <h2 className="ml-3">
+                <h2 className="ml-3 key-points">
                   See what's happening <br /> around the world
                 </h2>
               </div>
@@ -40,7 +40,19 @@ const Homepage = () => {
           </div>
         </div>
         <div className="col-lg-6" id="right">
-          right side
+          <div className="row" id="right-content">
+            <div className="col-sm-12">
+              <form className="text-center">
+                <label htmlFor="" className="d-block mb-3"><h2>Login</h2></label>
+                <input type="text" className="d-block mb-2 form-control" id="userName" placeholder="Username"/>
+                <input type="text" className="d-block mb-2 form-control" id="password" placeholder="Password"/>
+                <div className="text-center">
+                  <button className="mb-2 btn" id="login-btn">Let's go!</button>
+                </div>
+                <a href="" id="signup-link">Or Sign Up</a>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
