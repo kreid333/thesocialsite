@@ -1,13 +1,22 @@
+.row {
+  color: white !important;
+}
+
+#logo {
+  color: white;
+  font-weight: lighter;
+}
+
 #left {
   height: 100vh;
   position: relative;
-  background-color: rgb(70, 170, 255) !important;
+  background-color: rgb(65, 170, 255) !important;
 }
 
 #right {
   height: 100vh;
   position: relative;
-  background-color: rgb(100, 200, 255) !important;
+  background-color: rgb(20, 150, 255) !important;
 }
 
 #left-content {
@@ -28,14 +37,16 @@
 }
 
 #signup-link {
-  color: black;
+  color: white;
 }
 
 #login-btn {
-  background-color: rgb(40, 155, 255) !important;
+  background-color: transparent;
+  border: 1px solid white;
   color: white;
 }
 
 #login-btn:hover {
-  background-color: rgb(1, 115, 215) !important;
+  background-color: rgb(65, 170, 255);
+  border: 1px solid rgb(65, 170, 255);
 }
