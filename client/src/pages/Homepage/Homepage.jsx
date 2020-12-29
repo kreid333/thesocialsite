@@ -10,7 +10,7 @@ const Homepage = () => {
     <div className="container">
       <div className="row">
         <div className="col-lg-6" id="left">
-          <h1 id="logo">TheSocialSite</h1>
+          <h1 id="logo" className="text-center">TheSocialSite</h1>
           <div className="ml-3" id="left-content">
             <div className="row mb-5">
               <div className="col-xs-3">
