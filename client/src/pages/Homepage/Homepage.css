@@ -1,23 +1,41 @@
 #left {
-    height: 100vh;
-    position: relative;
-    background-color: rgb(70, 170, 255) !important;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(70, 170, 255) !important;
 }
 
 #right {
-    height: 100vh;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(100, 200, 255) !important;
 }
 
 #left-content {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-.icons {
-    height: 20vh;
+#right-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
 }
 
-h2 {
-    margin-top: 16px !important;
+.key-points {
+  margin-top: 16px !important;
+}
+
+#signup-link {
+  color: black;
+}
+
+#login-btn {
+  background-color: rgb(40, 155, 255) !important;
+  color: white;
+}
+
+#login-btn:hover {
+  background-color: rgb(1, 115, 215) !important;
 }
