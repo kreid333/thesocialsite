@@ -6,13 +6,16 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import SignUp from "../../components/Signup/SignUp";
 
 const Homepage = () => {
   // SETTING SHOW TO THE BOOLEAN FALSE (THIS IS USED FOR DISPLAYING THE MODAL)
   const [show, setShow] = useState(false);
 
-  // HANDLING CLOSE OF MODAL
-  const handleClose = () => setShow(false);
+  // SETTING STATES FOR USERNAME, EMAIL ADDRESS, AND PASSWORD
+  // const [username, setUsername] = useState("");
+  // const [emailAddress, setEmailAddress] = useState("");
+  // const [password, setPassword] = useState("");
   
   // HANDLING THE SHOWING OF THE MODAL
   const handleShow = (e) => {
@@ -39,37 +42,6 @@ const Homepage = () => {
           <Button onClick={props.onHide}>Close</Button>
         </Modal.Footer>
       </Modal>
-    );
-  }
-
-  // SIGN UP FORM FOR THE MODAL
-  function signUpForm() {
-    return (
-      <form className="text-center">
-        <input
-          type="text"
-          className="d-block mb-2 form-control"
-          id="userName"
-          placeholder="Username"
-        />
-        <input
-          type="text"
-          className="d-block mb-2 form-control"
-          id="emailAddress"
-          placeholder="Email Address"
-        />
-        <input
-          type="text"
-          className="d-block mb-2 form-control"
-          id="password"
-          placeholder="Password"
-        />
-        <div className="text-center">
-          <button className="mb-2 btn btn-primary">
-            Create Account
-          </button>
-        </div>
-      </form>
     );
   }
 
@@ -120,13 +92,13 @@ const Homepage = () => {
                 <input
                   type="text"
                   className="d-block mb-2 form-control"
-                  id="userName"
+                  id="loginUsername"
                   placeholder="Username"
                 />
                 <input
                   type="text"
                   className="d-block mb-2 form-control"
-                  id="password"
+                  id="loginPassword"
                   placeholder="Password"
                 />
                 <div className="text-center">
@@ -144,7 +116,7 @@ const Homepage = () => {
       </div>
 
       {/* MODAL */}
-      <CenteredModal show={show} onHide={() => setShow(false)} title="Create your account" signUpForm={signUpForm()} />
+      <CenteredModal show={show} onHide={() => setShow(false)} title="Create your account" signUpForm={<SignUp/>} />
     </div>
   );
 };
