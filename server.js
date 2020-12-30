@@ -13,6 +13,7 @@ const app = express();
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("client/build"));
 
 // CONNECTING TO MONGODB DATABASE
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/thesocialsite", {
@@ -39,6 +40,10 @@ app.get("/api/config", (req, res) => {
     success: true,
   });
 });
+
+// API ROUTES
+const apiRoutes = require("./controller/apiController");
+app.use(apiRoutes);
 
 // LISTENING ON LOCALHOST
 app.listen(PORT, () => {
