@@ -1,12 +1,31 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const SignUp = () => {
+  const history = useHistory();
   const [username, setUsername] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("/api/users", {
+        username: username,
+        emailAddress: emailAddress,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response);
+        history.push("/dashboard");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
-    <form className="text-center">
+    <form className="text-center" onSubmit={handleSubmit}>
       <input
         type="text"
         className="d-block mb-2 form-control"
@@ -17,7 +36,7 @@ const SignUp = () => {
         }}
       />
       <input
-        type="text"
+        type="email"
         className="d-block mb-2 form-control"
         id="signUpEmailAddress"
         placeholder="Email Address"
@@ -26,7 +45,7 @@ const SignUp = () => {
         }}
       />
       <input
-        type="text"
+        type="password"
         className="d-block mb-2 form-control"
         id="signUpPassword"
         placeholder="Password"
@@ -35,7 +54,7 @@ const SignUp = () => {
         }}
       />
       <div className="text-center">
-        <button className="mb-2 btn btn-primary">Create Account</button>
+        <button type="submit" className="mb-2 btn btn-primary">Create Account</button>
       </div>
     </form>
   );
